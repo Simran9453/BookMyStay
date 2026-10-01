@@ -1,0 +1,45 @@
+<%layout("layouts/boilerplate")%>
+<div class="row">
+    <div class="col-8 offset-2">
+    <br><br>
+    <h1>Create New Listing</h1>
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+        <lable for="title" class="form-lable">Title</lable>
+        <input placeholder="Enter title" name="listing[title]" class="form-control" required>
+        <div class="valid-feedback">Looks good!</div>
+        </div>
+        <br>
+        <div class="mb-3">
+        <lable for="description" class="form-lable">Description</lable> 
+        <textarea placeholder="Enter description" name="listing[description]" class="form-control" required></textarea>
+        </div>
+        <br>
+        <div class="mb-3">
+        <lable for="image" class="form-lable">Upload</lable> 
+        <input type="file" name="listing[image]" class="form-control">
+        </div>
+        <br>
+        <div class="row">
+        <div class="mb-3 col-md-4">
+        <lable for="price" class="form-lable">Price</lable>
+        <input placeholder="Enter Price" name="listing[price]" class="form-control" required>
+        <div class="invalid-feedback">Price should be valid</div>
+
+        </div>
+        <br>
+        <div class="mb-3 col-md-8">
+        <lable for="country" class="form-lable">Country</lable>
+        <input placeholder="Enter country" name="listing[country]" class="form-control"  required>
+        <div class="invalid-feedback">Country name should be valid</div>
+        </div>
+        </div>
+        <br>
+        <div class="mb-3">
+        <lable for="location" class="form-lable">Location</lable>
+        <input placeholder="Enter loaction" name="listing[location]" class="form-control" required>
+        <br><br>
+        <button class="btn btn-dark add-btn">add</button>
+    </form>
+    </div>
+</div>
